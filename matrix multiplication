@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{int i,j,n,m,mul,s=0,p;
+int aray[3][3]={{1,0,-1},{0,-1,1},{-1,0,1}};
+int aray1[3][3]={{1,2,3},{2,3,1},{3,1,2}};
+int aray2[3][3];
+
+        {for (int i = 0; i < 3; ++i) {
+      for (int j = 0; j < 3; ++j) {
+         for (int m = 0; m < 3; ++m) {
+            aray2[i][j] += aray[i][m] * aray[m][j];
+         }
+      }
+  }
+}
+
+for(i=0;i<3;i++)
+{for (j=0;j<3;j++)
+        {printf("%d\t",aray2[i][j]);
+        }
+        printf("\n");
+}}
