@@ -1,0 +1,88 @@
+#include <stdio.h>
+#include <string.h>
+#define MAX_STUDENTS 3
+typedef enum{
+    A,
+    B,
+    C,
+    D,
+    F
+}Score;
+struct student{
+    char name[100];
+    int age;
+    Score score;
+}stud;
+void addStudent(struct student stud[],int a){
+    if(a<3){
+    scanf("%s",stud[a].name);
+    scanf("%d",&stud[a].age);
+    scanf("%d",&stud[a].score);
+    printf("Added sucessfully");
+    }
+    else{
+        printf("Maximum number of students reached");
+    }
+}
+void displayStudents(struct student stud[]){
+    int i=0;
+    for(i;i<3;i++){
+        printf("Name:%s",stud[i].name);
+        printf("Age:%d",stud[i].age);
+        if(stud[i].score==0){
+        printf("Grade:A");}
+        else if(stud[i].score==1){
+        printf("Grade:B");}
+        else if(stud[i].score==2){
+        printf("Grade:C");}
+        else if(stud[i].score==3){
+        printf("Grade:D");}
+        else{
+            printf("Grade:F");
+        }
+
+    }
+
+}
+void findHighestScoringStudent(struct student stud[]){
+    int i=0,highest;
+    for(i;i<2;i++){
+       if(stud[i].score<stud[i+1].score){
+           highest=stud[i+1].score;
+       }
+    }
+printf("the highest score is:%d",highest);
+}
+
+
+int main(){
+    struct student students[MAX_STUDENTS];
+    int i;
+    for(i=0;i<2;i++){
+    printf("Enter name:");
+    scanf("%s",&students[i].name);
+    printf("Enter age:");
+     scanf("%d",&students[i].age);
+    printf("Enter grade (A/B/C/D/F):");
+    scanf("%s",&students[i].score);
+    }
+    int choice,n;
+    printf("Enter your choice(Option 1: Add a student,Option 2: Display all students,Option 3: Find the highest-scoring student,Option 4: Exit the program):");
+    scanf("%d",&choice);
+    n=i+1;
+    if(choice==1){
+        addStudent(students,n);
+    }
+    else if(choice==2){
+        displayStudents(students);
+    }
+    else if(choice==3){
+        findHighestScoringStudent(students);
+    }
+    else if(choice==4){
+        printf("Exiting the program. Thank you for using our system!");
+    }
+    else{
+        printf("Invalid choice");
+    }
+}
