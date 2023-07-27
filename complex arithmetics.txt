@@ -1,0 +1,24 @@
+#include <stdio.h>
+struct comp{
+        int real;
+        int img;
+}c1,c2,c3,c4;
+int main(){
+        printf("Enter first num");
+        printf("Enter the real part:");
+        scanf("%d",&c1.real);
+        printf("Enter the img part:");
+        scanf("%d",&c1.img);
+         printf("Enter second num");
+        printf("Enter the real part:");
+        scanf("%d",&c2.real);
+        printf("Enter the img part:");
+        scanf("%d",&c2.img);
+        c3.real=c1.real+c2.real;
+        c3.img=c1.img+c2.img;
+        c4.real=c1.real-c2.real;
+        c4.img=c1.img-c2.img;
+        printf("The comp num difference is %d + %d*i",c4.real,c4.img);
+        printf("The comp num sum is %d + %d*i",c3.real,c3.img);
+        return 0;
+        }
