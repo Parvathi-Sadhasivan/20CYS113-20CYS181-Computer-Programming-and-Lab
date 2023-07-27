@@ -1,0 +1,30 @@
+Int matrix[3];
+Int matrix1[3];
+printf("\nEnter elements of first matrix: \n");
+   for (int i = 0; i < row; ++i) {
+      for (int j = 0; j < column; ++j) {
+         printf("Enter a%d%d: ", i + 1, j + 1);
+         scanf("%d", &matrix[i][j]);
+      }
+printf("\nEnter elements of second matrix: \n");
+   for (int i = 0; i < row; ++i) {
+      for (int j = 0; j < column; ++j) {
+         printf("Enter a%d%d: ", i + 1, j + 1);
+         scanf("%d", &matrix1[i][j]);
+      }
+int matrix2[3][3];
+        {for (int i = 0; i < 3; ++i) {
+      for (int j = 0; j < 3; ++j) {
+         for (int m = 0; m < 3; ++m) {
+            matrix2[i][j] += matrix[i][m] * matrix1[m][j];
+         }
+      }
+  }
+}
+
+for(i=0;i<3;i++)
+{for (j=0;j<3;j++)
+        {printf("%d\t",aray2[i][j]);
+        }
+        printf("\n");
+}}
